@@ -21,6 +21,21 @@
 
 
         /* ========================================
+           TOP BANNER
+           ======================================== */
+
+        .top-banner {
+            width: 100%;
+            height: 50px;
+
+            background-image: url("gif/osakagif.gif");
+            background-repeat: repeat-x;
+            background-position: top left;
+            background-size: auto 50px;
+        }
+
+
+        /* ========================================
            MAIN PAGE LAYOUT
            ======================================== */
 
@@ -47,16 +62,6 @@
         }
 
 
-        .top-banner {
-            width: 100%;
-            height: 50px;
-        
-            background-image: url("gif/osakagif.gif");
-            background-repeat: repeat-x;
-            background-position: top left;
-            background-size: auto 50px;
-        }
-                
         /* ========================================
            LOGO
            ======================================== */
@@ -230,6 +235,27 @@
             }
 
 
+            /* Main content appears first */
+
+            .center {
+                order: 1;
+            }
+
+
+            /* Pictures appears second */
+
+            .pictures {
+                order: 2;
+            }
+
+
+            /* Links appears third */
+
+            .links {
+                order: 3;
+            }
+
+
             .side-panel {
                 min-height: 200px;
             }
@@ -301,19 +327,25 @@
     </style>
 </head>
 
-    
+
 <body>
-  
+
+
+    <!-- ====================================
+         TOP GIF BANNER
+         ==================================== -->
+
     <div class="top-banner"></div>
- 
+
+
     <div class="page">
 
 
         <!-- ====================================
-             LEFT SIDE
+             LEFT SIDE / PICTURES
              ==================================== -->
 
-        <div class="side-panel">
+        <div class="side-panel pictures">
 
             Maybe some pictures over here
 
@@ -327,14 +359,18 @@
         <main class="center">
 
 
-            <!-- LOGO -->
+            <!-- ====================================
+                 LOGO
+                 ==================================== -->
 
             <div class="logo">
                 DIREMOUSE.COM
             </div>
 
 
-            <!-- INTRO -->
+            <!-- ====================================
+                 INTRO
+                 ==================================== -->
 
             <div class="intro">
                 Maybe some text here?
@@ -385,16 +421,17 @@
 
                 </div>
 
+
             </div>
 
         </main>
 
 
         <!-- ====================================
-             RIGHT SIDE
+             RIGHT SIDE / LINKS
              ==================================== -->
 
-        <div class="side-panel">
+        <div class="side-panel links">
 
             Links and misc?
 
