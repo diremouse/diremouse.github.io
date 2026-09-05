@@ -110,7 +110,7 @@
 
 
         /* ========================================
-           GAME GRID
+           GAME AREA
            ======================================== */
 
         .games {
@@ -120,6 +120,24 @@
             grid-template-columns: 1fr 1fr;
 
             gap: 25px;
+        }
+
+
+        /* ========================================
+           INDEPENDENT GAME COLUMNS
+           ======================================== */
+
+        .game-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+
+        /* Move the right column down slightly */
+
+        .game-column.right {
+            padding-top: 30px;
         }
 
 
@@ -152,6 +170,18 @@
         .game-button:hover {
             background: #151b50;
             transform: scale(1.02);
+        }
+
+
+        /* ========================================
+           GIFS
+           ======================================== */
+
+        .site-gif {
+            width: 150px;
+            height: auto;
+
+            display: block;
         }
 
 
@@ -199,6 +229,11 @@
                 font-size: 48px;
             }
 
+
+            .game-column.right {
+                padding-top: 0;
+            }
+
         }
 
 
@@ -227,6 +262,16 @@
             }
 
 
+            .game-column {
+                gap: 15px;
+            }
+
+
+            .game-column.right {
+                padding-top: 0;
+            }
+
+
             .game-button {
                 height: 180px;
             }
@@ -236,11 +281,16 @@
                 min-height: 180px;
             }
 
+
+            .site-gif {
+                width: 100px;
+            }
+
         }
 
     </style>
 </head>
-<img src="gif/osakagif.gif" alt="Osaka Dance">
+
 
 <body>
 
@@ -279,40 +329,49 @@
             </div>
 
 
-            <!-- GAMES -->
+            <!-- ====================================
+                 GAME COLUMNS
+                 ==================================== -->
 
             <div class="games">
 
 
-                <a href="#" class="game-button">
-                    Game or App
-                </a>
+                <!-- LEFT GAME COLUMN -->
+
+                <div class="game-column">
+
+                    <a href="#" class="game-button">
+                        Game or App
+                    </a>
+
+                    <a href="#" class="game-button">
+                        Game or App
+                    </a>
+
+                    <a href="#" class="game-button">
+                        Game or App
+                    </a>
+
+                </div>
 
 
-                <a href="#" class="game-button">
-                    Game or App
-                </a>
+                <!-- RIGHT GAME COLUMN -->
 
+                <div class="game-column right">
 
-                <a href="#" class="game-button">
-                    Game or App
-                </a>
+                    <a href="#" class="game-button">
+                        Game or App
+                    </a>
 
+                    <a href="#" class="game-button">
+                        Game or App
+                    </a>
 
-                <a href="#" class="game-button">
-                    Game or App
-                </a>
+                    <a href="#" class="game-button">
+                        Game or App
+                    </a>
 
-
-                <a href="#" class="game-button">
-                    Game or App
-                </a>
-
-
-                <a href="#" class="game-button">
-                    Game or App
-                </a>
-
+                </div>
 
             </div>
 
